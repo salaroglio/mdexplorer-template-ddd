@@ -1,0 +1,93 @@
+{
+  "mde_workflow": 3,
+  "title": "DDD: dal linguaggio alla mappa dei contesti, confrontata con il codice",
+  "description": "Il linguaggio del dominio, i contesti e la loro mappa, l'allineamento con il codice e la decisione dell'architetto.",
+  "steps": [
+    {
+      "id": "linguaggio",
+      "agent": "ddd-analista",
+      "skill": "linguaggio-ubiquo",
+      "title": "Linguaggio del dominio",
+      "trigger": {
+        "launch": true
+      },
+      "start": "manual"
+    },
+    {
+      "id": "contesti",
+      "agent": "ddd-architetto",
+      "skill": "mappa-dei-contesti",
+      "title": "Contesti e mappa",
+      "trigger": {
+        "after": [
+          "linguaggio"
+        ]
+      },
+      "start": "ask-owner",
+      "inputs": {
+        "glossario": {
+          "from": "linguaggio.glossario"
+        }
+      }
+    },
+    {
+      "id": "codice",
+      "agent": "ddd-verificatore",
+      "skill": "allineamento-codice",
+      "title": "Allineamento con il codice",
+      "trigger": {
+        "after": [
+          "contesti"
+        ]
+      },
+      "start": "auto",
+      "inputs": {
+        "glossario": {
+          "from": "linguaggio.glossario"
+        },
+        "contesti": {
+          "from": "contesti.contesti"
+        }
+      }
+    },
+    {
+      "id": "decisione",
+      "person": "Architetto",
+      "title": "Accetta la mappa",
+      "trigger": {
+        "after": [
+          "codice"
+        ]
+      },
+      "task": "Leggi la mappa dei contesti e il rapporto di allineamento con il codice. Decidi se la mappa è accettata: gli scarti col codice diventano lavoro da pianificare, non ragioni per cambiarla.",
+      "inputs": {
+        "contesti": {
+          "from": "contesti.contesti"
+        },
+        "allineamento": {
+          "from": "codice.allineamento"
+        }
+      },
+      "outcomes": [
+        {
+          "id": "accettata",
+          "label": "Accettata"
+        },
+        {
+          "id": "da-rifare",
+          "label": "Da rifare"
+        }
+      ]
+    }
+  ],
+  "loops": [
+    {
+      "id": "rifacimento",
+      "steps": [
+        "contesti"
+      ],
+      "until": "approved",
+      "restart": "manual"
+    }
+  ]
+}

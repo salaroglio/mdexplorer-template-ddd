@@ -1,0 +1,20 @@
+mde_template: 1
+id: ddd
+kind: method
+title: Sviluppo con DDD
+description: "Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa, confrontati con il codice vero attraverso il grafo del codice."
+version: 1.0.0
+requires:
+  mde: 2026.10.18
+  features: [code]
+languages:
+  it: { structure: main, example: esempio }
+roles:
+  - { role: Responsabile del dominio, description: approva il linguaggio del dominio, agents: [ddd-analista] }
+  - { role: Architetto, description: "approva i contesti e l'allineamento con il codice, e accetta la mappa", agents: [ddd-architetto, ddd-verificatore] }
+workflows:
+  - .mde-template/ddd/workflows/ddd.md
+instructions: .mde-template/ddd/istruzioni.md
+seeds:
+  - { from: .mde-template/ddd/semi/README.md, to: ddd/README.md }
+  - { from: .mde-template/ddd/semi/dominio.md, to: ddd/dominio.md }
