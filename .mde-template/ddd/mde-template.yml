@@ -40,5 +40,6 @@ seeds:
   - { from: .mde-template/ddd/esempio/glossario.md, to: ddd/glossario.md }
   - { from: .mde-template/ddd/esempio/contesti.md, to: ddd/contesti.md }
   - { from: .mde-template/ddd/esempio/allineamento.md, to: ddd/allineamento.md }
+  - { from: .mde-template/ddd/esempio/codice/README.md, to: codice/assistente-helpdesk/README.md }
 programs:
   - { path: codice/assistente-helpdesk, languages: [csharp] }
