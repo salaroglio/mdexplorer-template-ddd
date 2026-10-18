@@ -17,4 +17,28 @@ workflows:
 instructions: .mde-template/ddd/istruzioni.md
 seeds:
   - { from: .mde-template/ddd/semi/README.md, to: ddd/README.md }
-  - { from: .mde-template/ddd/semi/dominio.md, to: ddd/dominio.md }
+  - { from: .mde-template/ddd/esempio/fonti/01-obiettivi-e-requisiti.md, to: ddd/fonti/01-obiettivi-e-requisiti.md }
+  - { from: .mde-template/ddd/esempio/fonti/02-architettura.md, to: ddd/fonti/02-architettura.md }
+  - { from: .mde-template/ddd/esempio/fonti/dati/metriche-obiettivo.json, to: ddd/fonti/dati/metriche-obiettivo.json }
+  - { from: .mde-template/ddd/esempio/fonti/mockup/pannello-operatore.html, to: ddd/fonti/mockup/pannello-operatore.html }
+  - { from: .mde-template/ddd/esempio/codice/Assistente/IMotoreRisposte.cs, to: codice/assistente-helpdesk/Assistente/IMotoreRisposte.cs }
+  - { from: .mde-template/ddd/esempio/codice/Assistente/MotoreRisposteDiProva.cs, to: codice/assistente-helpdesk/Assistente/MotoreRisposteDiProva.cs }
+  - { from: .mde-template/ddd/esempio/codice/Assistente/MotoreRisposteParoleChiave.cs, to: codice/assistente-helpdesk/Assistente/MotoreRisposteParoleChiave.cs }
+  - { from: .mde-template/ddd/esempio/codice/Assistente/Risposta.cs, to: codice/assistente-helpdesk/Assistente/Risposta.cs }
+  - { from: .mde-template/ddd/esempio/codice/Assistente/ServizioAssistente.cs, to: codice/assistente-helpdesk/Assistente/ServizioAssistente.cs }
+  - { from: .mde-template/ddd/esempio/codice/Conoscenza/CatalogoFaq.cs, to: codice/assistente-helpdesk/Conoscenza/CatalogoFaq.cs }
+  - { from: .mde-template/ddd/esempio/codice/Conoscenza/VoceFaq.cs, to: codice/assistente-helpdesk/Conoscenza/VoceFaq.cs }
+  - { from: .mde-template/ddd/esempio/codice/Metriche/MetricheRisoluzione.cs, to: codice/assistente-helpdesk/Metriche/MetricheRisoluzione.cs }
+  - { from: .mde-template/ddd/esempio/codice/Notifiche/INotifica.cs, to: codice/assistente-helpdesk/Notifiche/INotifica.cs }
+  - { from: .mde-template/ddd/esempio/codice/Notifiche/NotificaConsole.cs, to: codice/assistente-helpdesk/Notifiche/NotificaConsole.cs }
+  - { from: .mde-template/ddd/esempio/codice/Notifiche/NotificaEmail.cs, to: codice/assistente-helpdesk/Notifiche/NotificaEmail.cs }
+  - { from: .mde-template/ddd/esempio/codice/Program.cs, to: codice/assistente-helpdesk/Program.cs }
+  - { from: .mde-template/ddd/esempio/codice/Tickets/ArchivioTicketInMemoria.cs, to: codice/assistente-helpdesk/Tickets/ArchivioTicketInMemoria.cs }
+  - { from: .mde-template/ddd/esempio/codice/Tickets/IArchivioTicket.cs, to: codice/assistente-helpdesk/Tickets/IArchivioTicket.cs }
+  - { from: .mde-template/ddd/esempio/codice/Tickets/Ticket.cs, to: codice/assistente-helpdesk/Tickets/Ticket.cs }
+  - { from: .mde-template/ddd/esempio/dominio.md, to: ddd/dominio.md }
+  - { from: .mde-template/ddd/esempio/glossario.md, to: ddd/glossario.md }
+  - { from: .mde-template/ddd/esempio/contesti.md, to: ddd/contesti.md }
+  - { from: .mde-template/ddd/esempio/allineamento.md, to: ddd/allineamento.md }
+programs:
+  - { path: codice/assistente-helpdesk, languages: [csharp] }
