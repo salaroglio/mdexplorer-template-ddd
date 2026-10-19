@@ -3,9 +3,9 @@ id: ddd
 kind: method
 title: Sviluppo con DDD
 description: "Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa, confrontati con il codice vero attraverso il grafo del codice."
-version: 1.0.0
+version: 1.1.0
 requires:
-  mde: 2026.10.18
+  mde: 2026.10.19
   features: [code]
 languages:
   it: { structure: main, example: esempio }
@@ -15,6 +15,9 @@ roles:
 workflows:
   - .mde-template/ddd/workflows/ddd.md
 instructions: .mde-template/ddd/istruzioni.md
+slides:
+  it: .mde-template/ddd/presentazione.md
+  en: .mde-template/ddd/presentation.md
 seeds:
   - { from: .mde-template/ddd/semi/README.md, to: ddd/README.md }
   - { from: .mde-template/ddd/semi/dominio.md, to: ddd/dominio.md }
