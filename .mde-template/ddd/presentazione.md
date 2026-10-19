@@ -1,6 +1,11 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
+<img class="mde-icona-grande" src="/mde-space/icone/satellite.svg" alt="">
 
 # Sviluppo con DDD
 
@@ -9,7 +14,7 @@ Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa,
 
 ---
 
-## A che cosa serve
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> A che cosa serve
 
 - Le stesse parole vogliono dire cose diverse in parti diverse del sistema
 - Il DDD strategico le fissa: un linguaggio, dei contesti, una mappa fra loro
@@ -17,7 +22,7 @@ Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa,
 
 ---
 
-## Il giro
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Il giro
 
 1. **Linguaggio del dominio** — il glossario, una parola un significato
 2. **Contesti e mappa** — dove vale ogni parola, e i patti fra i contesti
@@ -26,7 +31,7 @@ Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa,
 
 ---
 
-## Le parole
+## <img class="mde-icona" src="/mde-space/icone/satellite.svg" alt=""> Le parole
 
 | Parola | In breve | Come… |
 |---|---|---|
@@ -37,7 +42,7 @@ Il DDD strategico: il linguaggio del dominio, i contesti e la loro mappa,
 
 ---
 
-## Chi fa che cosa
+## <img class="mde-icona" src="/mde-space/icone/astronauta.svg" alt=""> Chi fa che cosa
 
 | Ruolo | Che cosa fa |
 |---|---|
@@ -48,7 +53,7 @@ Tre agenti preparano (analista, architetto, verificatore), **le persone approvan
 
 ---
 
-## Che cosa trovi nel progetto
+## <img class="mde-icona" src="/mde-space/icone/base.svg" alt=""> Che cosa trovi nel progetto
 
 - `ddd/`: il dominio da descrivere, con il capitolo «Il codice»
 - tre agenti e i loro ruoli, ancora senza nome; le skill del linguaggio e dei contesti
@@ -56,7 +61,8 @@ Tre agenti preparano (analista, architetto, verificatore), **le persone approvan
 
 ---
 
-## Come si comincia
+<!-- .slide: data-background-image="/mde-space/sfondi/alieni.svg" class="mde-cielo" -->
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Come si comincia
 
 1. Compila `ddd/dominio.md`, con il capitolo «Il codice»
 2. Segna la cartella del codice (menu della cartella → «Ambiente di sviluppo») e lascia finire l'analisi
