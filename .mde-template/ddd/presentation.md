@@ -1,17 +1,22 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
+<img class="mde-icona-grande" src="/mde-space/icone/satellite.svg" alt="">
 
 # Development with DDD
 
 Strategic DDD: the domain language, the contexts and their map,
 **compared with the real code**.
 
-*This method is in Italian: its documents, agents and workflow speak Italian.*
-
 ---
 
-## What it is for
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> What it is for
+
+*This method is in Italian: its documents, agents and workflow speak Italian.*
 
 - The same words mean different things in different parts of the system
 - Strategic DDD pins them down: one language, some contexts, a map between them
@@ -19,7 +24,7 @@ Strategic DDD: the domain language, the contexts and their map,
 
 ---
 
-## The round
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> The round
 
 1. **Domain language** — the glossary, one word one meaning
 2. **Contexts and map** — where each word holds, and the agreements between contexts
@@ -28,7 +33,7 @@ Strategic DDD: the domain language, the contexts and their map,
 
 ---
 
-## The words
+## <img class="mde-icona" src="/mde-space/icone/satellite.svg" alt=""> The words
 
 | Word | In short | Like… |
 |---|---|---|
@@ -39,7 +44,7 @@ Strategic DDD: the domain language, the contexts and their map,
 
 ---
 
-## Who does what
+## <img class="mde-icona" src="/mde-space/icone/astronauta.svg" alt=""> Who does what
 
 | Role | What they do |
 |---|---|
@@ -50,8 +55,18 @@ Three agents prepare (analyst, architect, checker), **the people approve and dec
 
 ---
 
-## What you find in the project
+## <img class="mde-icona" src="/mde-space/icone/base.svg" alt=""> What you find in the project
 
 - `ddd/`: the domain to describe, with the chapter «Il codice» (the code)
 - three agents and their roles, nobody's yet; the language and contexts skills
 - **with the example**: the Alpina help desk, documents and C# code, with the round already done (invented data)
+
+---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/alieni.svg" class="mde-cielo" -->
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> How to start
+
+1. Fill in `ddd/dominio.md`, with the chapter «Il codice»
+2. Mark the code folder (folder menu → «Development environment») and let the analysis finish
+3. Each one takes their role («It's mine»)
+4. The domain owner starts «Linguaggio del dominio»
